@@ -1,16 +1,7 @@
 ================================================================================
 ECOMMERCE A/B TESTING PIPELINE - RESULTS SUMMARY
 ================================================================================
-Generated on: 2025-06-28 09:10:29
-
-DATA PIPELINE STATUS
-----------------------------------------
-/Users/rubyc/airflow/utils/generate_results.py:52: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
-  df_status = pd.read_sql(status_query, conn)
-dimension  records earliest_data latest_update
-  Sellers     3095    2025-06-28    2025-06-28
- Products    32951    2025-06-28    2025-06-28
-Customers    99441    2025-06-28    2025-06-28
+Generated on: 2025-05-15 09:14:29
 
 SALES ANALYTICS
 ----------------------------------------
@@ -45,7 +36,7 @@ A/B TEST RESULTS
 Coupon Promotion Test       10% Discount      Control          49556         7344                   14.820                150.53
 Coupon Promotion Test Free Shipping + 5%    Treatment          49885         7446                   14.926                151.32
 
-BAYESIAN STATISTICAL ANALYSIS
+BAYESIAN ANALYSIS
 ----------------------------------------
 Control Conversion Rate: 14.820%
 Treatment Conversion Rate: 14.926%
@@ -54,7 +45,7 @@ Expected Lift: 0.7%
 
 Statistical Conclusion: Inconclusive - continue testing
 
-🌍 GEOGRAPHIC DISTRIBUTION
+GEOGRAPHIC DISTRIBUTION
 ----------------------------------------
 /Users/rubyc/airflow/utils/generate_results.py:212: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
   df_geo = pd.read_sql(geo_query, conn)
@@ -70,7 +61,7 @@ customer_state  customers  percentage
             ES       2033         2.0
             GO       2020         2.0
 
-📦 TOP PRODUCT CATEGORIES
+TOP PRODUCT CATEGORIES
 ----------------------------------------
 /Users/rubyc/airflow/utils/generate_results.py:234: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
   df_categories = pd.read_sql(category_query, conn)
@@ -86,14 +77,3 @@ informatica_acessorios         7827     1059272.40           135.34
             automotivo         4235      685384.32           161.84
     ferramentas_jardim         4347      584219.21           134.40
 
-================================================================================
-PIPELINE SUMMARY
-================================================================================
-ETL Pipeline: Successfully transformed operational data to star schema
-Data Quality: All dimension and fact tables populated
-A/B Testing: Framework deployed with customer randomization
-Statistical Analysis: Bayesian evaluation framework operational
-Business Insights: Customer segmentation and product analytics available
-
-Pipeline is production-ready for ongoing A/B testing
-(base) rubyc@Rubys-MacBook-Air-2 airflow % 
