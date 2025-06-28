@@ -1,3 +1,33 @@
+DETAILED MONTHLY BREAKDOWN:
+--------------------------------------------------------------------------------
+ year  month month_name       variant_name variant_type  users_exposed  conversions  conversion_rate_percent  avg_conversion_value
+ 2025      6       June       10% Discount      Control          49556         7344                    14.82                150.53
+ 2025      6       June Free Shipping + 5%    Treatment          49885         7446                    14.93                151.32
+
+MONTHLY STATISTICAL ANALYSIS:
+--------------------------------------------------------------------------------
+
+📅 June 2025
+   Control:   49,556 users, 7344 conversions (14.82%)
+   Treatment: 49,885 users, 7446 conversions (14.93%)
+   Lift: +0.7%
+   P(Treatment > Control): 0.686
+   Result: Inconclusive
+
+OVERALL SUMMARY ACROSS ALL MONTHS:
+--------------------------------------------------------------------------------
+      variant_name variant_type  users_exposed  conversions  avg_conversion_value  conversion_rate_percent
+      10% Discount      Control          49556         7344                150.53                    14.82
+Free Shipping + 5%    Treatment          49885         7446                151.32                    14.93
+
+ FINAL EXPERIMENT CONCLUSION:
+   Total Control Users: 49,556
+   Total Treatment Users: 49,885
+   Control Conversion Rate: 14.82%
+   Treatment Conversion Rate: 14.93%
+   Overall Lift: +0.7%
+
+
 ================================================================================
 ECOMMERCE A/B TESTING PIPELINE - RESULTS SUMMARY
 ================================================================================
