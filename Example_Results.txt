@@ -7,7 +7,7 @@ DETAILED MONTHLY BREAKDOWN:
 MONTHLY STATISTICAL ANALYSIS:
 --------------------------------------------------------------------------------
 
-📅 June 2025
+June 2025
    Control:   49,556 users, 7344 conversions (14.82%)
    Treatment: 49,885 users, 7446 conversions (14.93%)
    Lift: +0.7%
