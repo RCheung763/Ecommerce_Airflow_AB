@@ -85,11 +85,6 @@ Multi-variate Support: This framework can support A/B/C/.. testing
 ### Example Test Case
 Coupon Promotion Experiment
 
-Variant A (Control): 10% discount offer  
-Variant B (Treatment): Free shipping + 5% discount  
-Metric: Conversion rate  
-Analysis: Bayesian posterior probability that B > A  
-
 ## Pipeline Components  
 ### 1. ETL Pipeline (ecomm_analytics_pipeline)    
 Schedule: Monthly (@monthly)   
