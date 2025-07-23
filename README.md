@@ -43,10 +43,17 @@ ecomm_cust_db.public schema:
 ecomm_cust_db.ecommerce_analytics schema:  
 ├── dim_customer  
 ├── dim_product  
-├── dim_seller  
+├── dim_seller
+├── dim_bayesian_priors_store
+├── dim_ab_test
+├── dim_date
+├── dim_order_status
+├── dim_test_variant
 ├── fact_sales  
 ├── fact_orders  
-└── etc.  
+├── fact_reviews
+├── fact_ab_test_events
+└── fact_payments
 
 ### Dimension Tables  
 
@@ -55,7 +62,8 @@ dim_product: Product catalog with calculated metrics (volume, weight categories)
 dim_seller: Seller information and performance metrics  
 dim_date: Date dimension with Brazilian holidays  
 dim_ab_test: A/B test definitions and metadata  
-dim_test_variant: Test variants (control/treatment groups)  
+dim_test_variant: Test variants (control/treatment groups)
+bayesian_priors_store: Stores prior for Bayesian A/B test
 
 ### Fact Tables
 
@@ -65,24 +73,32 @@ fact_payments: Payment method analysis
 fact_reviews: Customer review analytics  
 fact_ab_test_events: A/B test exposure and conversion tracking  
 
+### Airflow file structure
+your_airflow_project/
+├── dags/
+│   └── ecomm_monthly_tasks.py          # ← Monthly script: A/B test, data quality checks
+└── utils/
+    ├── monthly_bayesian_update.py      # ← Bayesian update
+    ├── calculate_initial_priors.py     # ← This file was used after initial load and calculating posteriors from historical data
+    └── ab_test_results_analyzer.py     # ←
+
 ## A/B Testing Framework
 ### Features
 
-Randomized Assignment: Hash-based customer allocation to variants (A hash function is a special type of function that takes an input (like a string, number, or file) 
-and returns a fixed-size string of characters of numbers and letters.)  
+Randomized Assignment: Hash-based customer allocation to variants
 
 Bayesian Analysis: Beta-Binomial modeling for statistical inference  
 Approach is used for modeling binary outcomes(Bernoulli), allows for updates on belief as more data comes   
 p Beta(α,β)  
 α = prior successes + 1  
 β = prior failures + 1  
-Beta distribution is flexible and confined to [0, 1], making it perfect for probabilities  
+Beta distribution is flexible and confined to [0, 1], interpretable as probabilities  
 
 Automated Evaluation: Credible intervals and probability calculations
 
 Multi-variate Support: This framework can support A/B/C/.. testing
 
-### Example Test Case
+### Test Case
 Coupon Promotion Experiment
 
 ## Pipeline Components  
