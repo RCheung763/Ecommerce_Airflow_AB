@@ -41,19 +41,20 @@ ecomm_cust_db.public schema:
 └── sellers  
 
 ecomm_cust_db.ecommerce_analytics schema:  
-├── dim_customer  
+├── dim_customer    
 ├── dim_product  
-├── dim_seller
-├── dim_bayesian_priors_store
-├── dim_ab_test
-├── dim_date
-├── dim_order_status
-├── dim_test_variant
+├── dim_seller  
+├── dim_bayesian_priors_store  
+├── dim_ab_test  
+├── dim_date  
+├── dim_order_status  
+├── dim_test_variant  
 ├── fact_sales  
 ├── fact_orders  
-├── fact_reviews
-├── fact_ab_test_events
-└── fact_payments
+├── fact_reviews  
+├── fact_ab_test_events  
+└── fact_payments  
+
 
 ### Dimension Tables  
 
@@ -73,14 +74,13 @@ fact_payments: Payment method analysis
 fact_reviews: Customer review analytics  
 fact_ab_test_events: A/B test exposure and conversion tracking  
 
-### Airflow file structure
-your_airflow_project/
-├── dags/
-│   └── ecomm_monthly_tasks.py          # ← Monthly script: A/B test, data quality checks
-└── utils/
-    ├── monthly_bayesian_update.py      # ← Bayesian update
-    ├── calculate_initial_priors.py     # ← This file was used after initial load and calculating posteriors from historical data
-    └── ab_test_results_analyzer.py     # ←
+### Airflow file structure  
+├── dags/  
+│   └── ecomm_monthly_tasks.py          # ← Monthly script: A/B test, data quality checks  
+└── utils/  
+    ├── monthly_bayesian_update.py      # ← Bayesian update  
+    ├── calculate_initial_priors.py     # ← This file was used after initial load and calculating posteriors from historical data  
+    └── ab_test_results_analyzer.py     # ←  
 
 ## A/B Testing Framework
 ### Features
