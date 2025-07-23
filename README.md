@@ -76,11 +76,11 @@ fact_ab_test_events: A/B test exposure and conversion tracking
 
 ### Airflow file structure  
 ├── dags/  
-│   └── ecomm_monthly_tasks.py          # ← Monthly script: A/B test, data quality checks  
+&nbsp;&nbsp;&nbsp;&nbsp;└── ecomm_monthly_tasks.py          # ← Monthly script: A/B test, data quality checks  
 └── utils/  
-    ├── monthly_bayesian_update.py      # ← Bayesian update  
-    ├── calculate_initial_priors.py     # ← This file was used after initial load and calculating posteriors from historical data  
-    └── ab_test_results_analyzer.py     # ←  
+&nbsp;&nbsp;&nbsp;&nbsp;├── monthly_bayesian_update.py      # ← Bayesian update  
+&nbsp;&nbsp;&nbsp;&nbsp;├── calculate_initial_priors.py     # ← This file was used after initial load and calculating posteriors from historical data  
+&nbsp;&nbsp;&nbsp;&nbsp;└── ab_test_results_analyzer.py     # ←  
 
 ## A/B Testing Framework
 ### Features
