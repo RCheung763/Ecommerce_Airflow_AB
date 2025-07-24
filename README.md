@@ -94,10 +94,6 @@ p Beta(α,β)
 β = prior failures + 1  
 Beta distribution is flexible and confined to [0, 1], interpretable as probabilities  
 
-Automated Evaluation: Credible intervals and probability calculations
-
-Multi-variate Support: This framework can support A/B/C/.. testing
-
 ### Test Case
 Coupon Promotion Experiment
 
@@ -141,6 +137,3 @@ Uncertainty Quantification: Credible intervals for effect sizes
 ## Future Enhancements  
 Real-time Processing: Stream processing for live experiments  
 Advanced Segmentation: Machine learning-based customer clustering  
-Multi-armed Bandits: Dynamic traffic allocation  
-Causal Inference: Treatment effect estimation with confounding control  
-Automated Alerting: Slack/email notifications for significant results  
