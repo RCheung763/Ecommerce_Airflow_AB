@@ -79,8 +79,8 @@ fact_ab_test_events: A/B test exposure and conversion tracking
 &nbsp;&nbsp;&nbsp;&nbsp;└── ecomm_monthly_tasks.py          # ← Monthly script: A/B test, data quality checks  
 └── utils/  
 &nbsp;&nbsp;&nbsp;&nbsp;├── monthly_bayesian_update.py      # ← Bayesian update  
-&nbsp;&nbsp;&nbsp;&nbsp;├── calculate_initial_priors.py     # ← This file was used after initial load and calculating posteriors from historical data  
-&nbsp;&nbsp;&nbsp;&nbsp;└── ab_test_results_analyzer.py     # ←  
+&nbsp;&nbsp;&nbsp;&nbsp;└── calculate_initial_priors.py     # ← This file was used after initial load and calculating posteriors from historical data  
+
 
 ## A/B Testing Framework
 ### Features
@@ -98,7 +98,7 @@ Beta distribution is flexible and confined to [0, 1], interpretable as probabili
 Coupon Promotion Experiment
 
 ## Pipeline Components  
-### 1. ETL Pipeline (ecomm_analytics_pipeline)    
+### 1. ETL Pipeline ()    
 Schedule: Monthly (@monthly)   
 Tasks:  
 
