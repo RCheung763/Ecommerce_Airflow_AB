@@ -1,0 +1,76 @@
+================================================================================
+Monthly BI Report
+Period: 2017-11
+Generated: 2025-07-23 21:07:11
+================================================================================
+
+Summary
+--------------------------------------------------
+Total Revenue:        $2,358,287.54
+Total Orders:         7,451.0
+Total Line Items:     17,330.0
+Unique Customers:     7,451.0
+Average Order Value:  $316.51
+Items per Order:      2.3
+Revenue per Customer: $316.51
+
+Customer Analysis
+--------------------------------------------------
+         New:  7,231 customers | $ 2,290,061 revenue | $ 316.70 per customer
+   Returning:    212 customers | $    66,984 revenue | $ 315.96 per customer
+     Regular:      8 customers | $     1,243 revenue | $ 155.36 per customer
+
+Top Product Categories
+--------------------------------------------------
+ 1. cama_mesa_banho      |  1,950 items | $   213,338 revenue
+ 2. relogios_presentes   |    938 items | $   211,346 revenue
+ 3. beleza_saude         |  1,168 items | $   179,266 revenue
+ 4. informatica_acessori |  1,064 items | $   166,500 revenue
+ 5. moveis_decoracao     |  1,566 items | $   156,166 revenue
+ 6. esporte_lazer        |  1,224 items | $   151,220 revenue
+ 7. brinquedos           |    990 items | $   147,640 revenue
+ 8. cool_stuff           |    604 items | $   125,932 revenue
+ 9. ferramentas_jardim   |  1,100 items | $   116,400 revenue
+10. utilidades_domestica |    846 items | $    86,801 revenue
+
+ A/B Test Performance
+--------------------------------------------------
+10% Discount        :  54.63% conversion | 27,073 / 49,556 users
+Free Shipping + 5%  :  55.88% conversion | 27,878 / 49,885 users
+
+A/B Test Conclusion: Free Shipping + 5% outperforms by 1.2%
+
+ Top Customer States
+--------------------------------------------------
+
+ 1. SP  | 2,971 customers | 2,971 orders | $   823,286
+ 2. RJ  | 1,040 customers | 1,040 orders | $   351,054
+ 3. MG  |   932 customers |   932 orders | $   311,812
+ 4. RS  |   417 customers |   417 orders | $   137,455
+ 5. PR  |   371 customers |   371 orders | $   110,946
+ 6. SC  |   298 customers |   298 orders | $    93,996
+ 7. BA  |   245 customers |   245 orders | $    71,693
+ 8. DF  |   162 customers |   162 orders | $    63,414
+ 9. ES  |   170 customers |   170 orders | $    57,760
+10. GO  |   156 customers |   156 orders | $    50,152
+
+ Key Insights
+--------------------------------------------------
+• High AOV of $316.51 indicates premium customer base
+• Good cross-selling: 2.3 items per order
+• A/B test shows measurable impact on conversion rates
+
+Recommendations
+--------------------------------------------------
+• Implement retention campaigns for new customers
+• Continue A/B testing to reach statistical significance
+• Optimize inventory for top category: cama_mesa_banho
+
+================================================================================
+Report completed for 2017-11
+================================================================================
+
+   Period: 2017-11
+   Revenue: $2,358,287.54
+   Orders: 7,451
+   Customers: 7,451
