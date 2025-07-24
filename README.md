@@ -78,7 +78,7 @@ fact_ab_test_events: A/B test exposure and conversion tracking
 ├── dags/  
 &nbsp;&nbsp;&nbsp;&nbsp;└── ecomm_monthly_tasks.py          # ← Monthly script: A/B test, data quality checks  
 └── utils/  
-&nbsp;&nbsp;&nbsp;&nbsp;├── monthly_bayesian_update.py      # ← Bayesian update  
+&nbsp;&nbsp;&nbsp;&nbsp; ├── monthly_bayesian_update.py      # ← Bayesian update  
 &nbsp;&nbsp;&nbsp;&nbsp;└── calculate_initial_priors.py     # ← This file was used after initial load and calculating posteriors from historical data  
 
 
@@ -98,8 +98,8 @@ Beta distribution is flexible and confined to [0, 1], interpretable as probabili
 Coupon Promotion Experiment
 
 ## Pipeline Components  
-### 1. ETL Pipeline ()    
-Schedule: Monthly (@monthly)   
+### 1. ETL Pipeline (Initial Load of historical data)    
+Schedule: -- 
 Tasks:  
 
 load_customers_dimension - Extract and enrich customer data  
@@ -118,6 +118,11 @@ Null value detection in critical fields
 Referential integrity checks  
 Date range validation  
 Data freshness monitoring  
+
+### 3. Baysian A/B Testing 
+Schdule: Monthly (@monthly)
+
+Using last months posteriors as current month's priors 
 
 ## Statistical Methodology
 ### Bayesian A/B Testing  
