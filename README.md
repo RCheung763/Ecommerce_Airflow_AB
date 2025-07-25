@@ -78,14 +78,13 @@ fact_ab_test_events: A/B test exposure and conversion tracking
 ├── dags/  
 &nbsp;&nbsp;&nbsp;&nbsp;└── ecomm_monthly_tasks.py          # ← Monthly script: A/B test, data quality checks  
 └── utils/  
-&nbsp;&nbsp;&nbsp;&nbsp; ├── monthly_bayesian_update.py      # ← Bayesian update  
-&nbsp;&nbsp;&nbsp;&nbsp;└── calculate_initial_priors.py     # ← This file was used after initial load and calculating posteriors from historical data  
-
+&nbsp;&nbsp;&nbsp;&nbsp;├── monthly_bayesian_update.py      # ← Bayesian update  
+&nbsp;&nbsp;&nbsp;&nbsp;├── calculate_initial_priors.py     # ← This file was used after initial load and calculating posteriors from historical data   
 
 ## A/B Testing Framework
 ### Features
 
-Randomized Assignment: Hash-based customer allocation to variants
+Randomized Assignment: Hash-based customer allocation to variants for test simulation
 
 Bayesian Analysis: Beta-Binomial modeling for statistical inference  
 Approach is used for modeling binary outcomes(Bernoulli), allows for updates on belief as more data comes   
@@ -94,35 +93,26 @@ p Beta(α,β)
 β = prior failures + 1  
 Beta distribution is flexible and confined to [0, 1], interpretable as probabilities  
 
+
 ### Test Case
 Coupon Promotion Experiment
 
 ## Pipeline Components  
-### 1. ETL Pipeline (Initial Load of historical data)    
-Schedule: -- 
-Tasks:  
-
-load_customers_dimension - Extract and enrich customer data  
-load_products_dimension - Process product catalog with calculated fields  
-load_sellers_dimension - Aggregate seller performance metrics  
-load_sales_fact - Transform transactional data  
-setup_ab_test - Initialize experiment framework  
-assign_customers_to_variants - Randomized group assignment  
-bayesian_ab_analysis - Statistical evaluation and recommendations  
+### 1. ETL Pipeline (updates hypothetical) 
+### Shown is the initial historical data load into database and star schema
+Schedule: Daily (@daily)    
+Daily ingestion of data 
 
 ### 2. Data Quality Pipeline (ecomm_data_quality_checks)  
 Schedule: Monthly (@monthly)  
 Validations:  
-
 Null value detection in critical fields  
 Referential integrity checks  
 Date range validation  
 Data freshness monitoring  
 
-### 3. Baysian A/B Testing 
-Schdule: Monthly (@monthly)
-
-Using last months posteriors as current month's priors 
+### 3. Bayesian A/B Testing
+Schedule Monthly (@monthly)
 
 ## Statistical Methodology
 ### Bayesian A/B Testing  
@@ -132,6 +122,12 @@ Likelihood: Binomial for conversion events
 Posterior: Beta distribution for conversion rates  
 Decision Rule: P(Treatment > Control) > 95% for significance  
 
+Prior Distribution
+θ ~ Beta(α₀, β₀)  
+θ = true conversion rate for a variant  
+α₀ = prior alpha parameter  
+β₀ = prior beta parameter  
+
 ### Advantages over Frequentist Testing
 
 Interpretable Results: Direct probability statements  
@@ -140,5 +136,5 @@ Practical Significance: Incorporates business context
 Uncertainty Quantification: Credible intervals for effect sizes  
 
 ## Future Enhancements  
-Real-time Processing: Stream processing for live experiments  
-Advanced Segmentation: Machine learning-based customer clustering  
+Real-time Processing: Stream processing for live experiments, build the daily ingestion of data portion of the pipeline
+Advanced Segmentation: Machine learning-based customer clustering 
