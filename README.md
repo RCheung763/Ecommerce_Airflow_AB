@@ -98,8 +98,9 @@ Beta distribution is flexible and confined to [0, 1], interpretable as probabili
 Coupon Promotion Experiment
 
 ## Pipeline Components  
-### 1. ETL Pipeline (updates hypothetical) 
-### Shown is the initial historical data load into database and star schema
+### 1. ETL Pipeline (updates hypothetical)  
+Scripts include the initial historical data load into database and star schema
+
 Schedule: Daily (@daily)    
 Daily ingestion of data 
 
