@@ -19,7 +19,7 @@ def get_db_connection():
         host='localhost',
         database='ecomm_cust_db',
         user='rubyc',
-        password='tHvGUE8QbQWNNum4'
+        password='****'
     )
 
 def create_prior_storage_table():
