@@ -3,7 +3,7 @@ from sqlalchemy import create_engine
 
 db_name = 'ecomm_cust_db'
 user = 'rubyc'
-password = ''
+password = '****'
 host = 'localhost'
 port = 5432
 
